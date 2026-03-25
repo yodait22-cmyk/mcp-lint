@@ -21,6 +21,14 @@ export const noRequiredFalse: Rule = {
           toolName: tool.name,
           path: diagnosticPath,
           clients: ['claude', 'cursor', 'gemini', 'vscode'],
+          fix: {
+            description: 'Remove `required: false` from the property',
+            apply: (s) => {
+              const copy = { ...s };
+              delete copy['required'];
+              return copy;
+            },
+          },
         });
       }
     });

@@ -1,4 +1,5 @@
 import type { Severity } from './severity.js';
+export type { Severity } from './severity.js';
 import type { Diagnostic } from './diagnostic.js';
 
 export type ClientId = 'claude' | 'cursor' | 'gemini' | 'vscode';
