@@ -1,0 +1,33 @@
+{
+  "name": "mcp-lint",
+  "version": "0.1.0",
+  "description": "Lint MCP server tool schemas for cross-client compatibility",
+  "type": "module",
+  "bin": {
+    "mcp-lint": "./dist/index.js"
+  },
+  "main": "./dist/core/engine.js",
+  "types": "./dist/core/engine.d.ts",
+  "files": ["dist/"],
+  "keywords": ["mcp", "model-context-protocol", "lint", "schema", "validation"],
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build && npm run test"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "commander": "^14.0.3",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.1"
+  }
+}

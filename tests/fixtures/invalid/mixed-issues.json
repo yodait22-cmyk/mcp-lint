@@ -1,0 +1,13 @@
+[
+  {
+    "name": "broken-tool",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string", "required": false },
+        "encoding": { "type": "string", "contentEncoding": "base64" },
+        "status": { "type": "string", "enum": [] }
+      }
+    }
+  }
+]

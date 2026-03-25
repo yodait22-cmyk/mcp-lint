@@ -1,0 +1,13 @@
+[
+  {
+    "name": "search",
+    "description": "Search for items matching the query",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "query": { "type": "string", "description": "Search query" }
+      },
+      "required": ["query"]
+    }
+  }
+]
